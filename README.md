@@ -9,19 +9,19 @@ The pipeline consists of four main steps:
    - Construct cleaned feature tables (coordinates, distance, time, price, temporal indicators, etc.).  
    - Save processed data for downstream experiments.
 
-2. **Model training and hyperparameter tuning** (`10.ML-tuned1.py`):  
+2. **Model training and hyperparameter tuning** (`2.AbnormalitiesDetection.py`):  
    - Define input feature space and preprocessing (scaling and one-hot encoding).  
    - Train Decision Tree, SVM, and Isolation Forest models using stratified 5-fold cross-validation.  
    - Perform grid search over hyperparameters using PR-AUC as the selection criterion.  
    - Export cross-validation metrics and best parameters for each model family.
 
-3. **Result visualization** (`11.visualization.py`):  
+3. **Result visualization** (`3.Visualizationn.py`):  
    - Plot bar charts comparing F1-score, recall, and PR-AUC across models.  
    - Plot precision–recall curves and ROC curves for the tuned models.  
    - Plot confusion matrices and score distributions for the final SVM detector.  
    - Plot precision@K and recall@K curves for top-ranked trips.
 
-4. **Feature ablation analysis** (`12.Abalation.py`):  
+4. **Feature ablation analysis** (`4.Ablation.py`):  
    - Perform feature ablation experiments on the tuned SVM model.  
    - For each ablation setting, compute cross-validation metrics such as accuracy, precision, recall, F1-score, ROC-AUC, and PR-AUC.  
    - Export a summary CSV for further analysis and for inclusion in the report.
