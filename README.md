@@ -1,3 +1,5 @@
+Robert Wang (UID: 01586140)
+
 # Taxi Anomaly Detection
 
 This repository contains code for detecting anomalous taxi trips such as detours and overcharging using supervised machine learning models.
